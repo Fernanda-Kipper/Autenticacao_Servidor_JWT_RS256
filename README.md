@@ -8,7 +8,7 @@ Após clonar esse repositório você pode:
 
 <li>Iniciar o servidor: npm start </li>
 
--Realizar as migrations do banco de dados: npm run knex-db-migrate
+<li>Realizar as migrations do banco de dados: npm run knex-db-migrate </li>
 
 
 ## :warning: Tecnologias Utilizadas
