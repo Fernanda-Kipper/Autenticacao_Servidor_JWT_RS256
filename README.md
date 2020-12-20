@@ -1,14 +1,15 @@
-# Servidor-Autenticação
+# Server_autenticação_JWT_RS256
 
 ## :information_source: O que é:
 Este projeto traz um exemplo do funcionamento básico do back-end que lida com o cadastro e autenticação de usuários.
+A autenticação é feita através de tokens contidos nos cookies do usuário, esses enviados pelo servidor no momento do login. Os token são gerados utlizando JWT com o algoritmo RS256, um sistema de criptografia que utiliza chaves públicas e privadas.
 
 ## Como rodar?
-Após clonar esse repositório você pode:
+Após clonar esse repositório você pode rodar os comandos:
 
--Iniciar o servidor: npm start
+<li>Iniciar o servidor: npm start</li>
 
--Realizar as migrations do banco de dados: npm run knex-db-migrate
+<li>Realizar as migrations do banco de dados: npm run knex-db-migrate</li>
 
 
 ## :warning: Tecnologias Utilizadas
