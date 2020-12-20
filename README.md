@@ -7,14 +7,9 @@ A autenticação é feita através de tokens contidos nos cookies do usuário, e
 ## Como rodar?
 Após clonar esse repositório você pode rodar os comandos:
 
-<<<<<<< HEAD
 <li>Iniciar o servidor: npm start</li>
 
 <li>Realizar as migrations do banco de dados: npm run knex-db-migrate</li>
-=======
-
->>>>>>> f1a19f33afd551980e44439669138b7e47cd87c5
-
 
 ## :warning: Tecnologias Utilizadas
 Foram utilizadas diversas tecnologias que auxíliariam na finalização do projeto. As quais são:
