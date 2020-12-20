@@ -28,5 +28,7 @@ Foram utilizadas diversas tecnologias que auxíliariam na finalização do proje
 
 Entre outras bibliotecas que auxiliaram na construção.
 
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Fernanda-Kipper)](https://github.com/Fernanda-Kipper/Autenticacao_Servidor_JWT_RS256)
+
 
 
