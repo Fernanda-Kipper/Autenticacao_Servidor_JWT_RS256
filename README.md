@@ -6,7 +6,7 @@ Este projeto traz um exemplo do funcionamento básico do back-end que lida com o
 ## Como rodar?
 Após clonar esse repositório você pode:
 
--Iniciar o servidor: npm start
+<li>Iniciar o servidor: npm start </li>
 
 -Realizar as migrations do banco de dados: npm run knex-db-migrate
 
