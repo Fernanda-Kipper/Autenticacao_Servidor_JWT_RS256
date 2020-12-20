@@ -3,6 +3,12 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
 
+const signOptions = {
+    algorithm: 'RS256',
+    expiresIn: '1h'
+}  // Sistema de criptografia que utiliza uma chave pública e privada
+
+
 async function loginUsuario(req, res){
     try{
         const user_found = await db('users').select('*').where('users.email', '=', req.body.email);
@@ -16,8 +22,8 @@ async function loginUsuario(req, res){
                     id_usuario: user_found[0].id,
                     email: user_found[0].email
                 }, 
-                process.env.SECRET_KEY,
-                {expiresIn: "1h"}
+                process.env.JWT_PRIVATE_KEY,
+                signOptions
                 )
                 return res.status(200).cookie('token', token, {
                     httpOnly: true,
@@ -39,7 +45,7 @@ async function cadastroUsuario(req, res){
         await db('users').insert({
             email,
             password});
-        return res.status(201).send("Cadastro realizado com sucesso");
+        return res.status(201).json({sucesso: "Cadastro realizado com sucesso, realize login"});
     }catch (err){
         console.log(err)
         if (err.toString().includes('UNIQUE')){

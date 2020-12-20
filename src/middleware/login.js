@@ -1,16 +1,13 @@
 const jwt = require('jsonwebtoken')
 
-/// a secret key precisa ser uma variável de ambiente depois
-
-function loginVerify(req, res, next){
-    const token = req.headers.authorization.split(' ')[1]
+function verificaSessao(req, res, next){
     try{
-        const decode = jwt.verify(token, process.env.SECRET_KEY)
+        const token = req.cookies.token
+        const decode = jwt.verify(token, process.env.JWT_PUBLIC_KEY)
         req.body.usuario = decode
         next()
     }catch(err){
-        return res.status(401).send({mensagem: "Falha na autenticação"})
+        return res.status(401).json({mensagem: "Falha na autenticação"})
     }
 }
-
-module.exports = loginVerify
+module.exports = verificaSessao;

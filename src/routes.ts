@@ -4,12 +4,12 @@ const routes = express.Router();
 
 const {cadastroUsuario, loginUsuario} = require(__dirname + '/controllers/usuariosController.js')
 const adicionaPostagem = require(__dirname + '/controllers/postagemController.js')
-const loginVerify = require(__dirname+ "/middleware/login")
+const  verificaSessao = require(__dirname+ "/middleware/login")
 
 
-routes.post("/cadastro",cadastroUsuario)
-routes.post("/login", loginUsuario)
+routes.post("/user/signin",cadastroUsuario)
+routes.post("/user/login", loginUsuario)
 
-routes.post("/postMensagem",loginVerify,adicionaPostagem)
+routes.post("/user/publicar",verificaSessao,adicionaPostagem)
 
 export default routes;
